@@ -15,6 +15,7 @@ trait ResponseTrait
             'data' => $data,
         ], $status);
     }
+
     protected function responsePagination($paginator, $data = [], string $message = null, int $status = 200)
     {
         if ($paginator instanceof LengthAwarePaginator) {
@@ -42,6 +43,7 @@ trait ResponseTrait
             'pagination' => $pagination,
         ], $status);
     }
+
     protected function error(string $message = null, int $status = 400)
     {
         $message = $message ?: __('errors.operation');
@@ -50,5 +52,4 @@ trait ResponseTrait
             'message' => $message,
         ], $status);
     }
-
 }

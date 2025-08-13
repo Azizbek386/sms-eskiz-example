@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 
 use App\DTO\Auth\UserDTO;
+use App\Traits\ResponseTrait;
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
 use App\Http\Resources\UserResource;

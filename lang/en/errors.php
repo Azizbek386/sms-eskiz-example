@@ -15,5 +15,6 @@ return [
     ],
     'code' => [
         'old_or_incorrect' => 'The code you entered is incorrect or out of date'
-    ]
+    ],
+  
 ];

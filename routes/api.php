@@ -5,12 +5,12 @@ use App\Http\Controllers\EskizController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get("/send-sms", [EskizController::class, 'sendSms'])->name('send.sms');
+
 Route::middleware( 'setLocale')->group(function(){
-    Route::middleware('auth:sanctum')->group(function(){
-        Route::get('/user', [AuthController::class, 'getUser']);
-        Route::get('/logout', [AuthController::class, 'logout']);
-    });
+   Route::middleware('auth:sanctum')->group(function(){
+    Route::get('/user', [AuthController::class, 'getUser']);
+    Route::get('/logout', [AuthController::class, 'logout']);
+});
 
     Route::post('/verify-phone', [AuthController::class, 'verifyPhone']);
     Route::post('/register', [AuthController::class, 'register']);
